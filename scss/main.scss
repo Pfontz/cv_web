@@ -4,10 +4,19 @@ body {
     background-color: $light;
 }
 
+.mx-auto{
+    margin-top: 2rem;
+}
 
-.rounded{
-    width: 15% !important;
-    height: 15% !important;
-    margin-top: 1rem*8 !important;
+@media (max-width: 412px) {
+    .card{
+        width: fit-content !important;
+        margin-top: 0rem !important;
+    }
     
+}
+
+.btn-info{
+    margin-left: 15px !important;
+
 }
