@@ -1,5 +1,6 @@
 @import "../scss/bootstrap-5.2.3/scss/bootstrap.scss";
 
+
 body {
     background-color: $light;
 }
@@ -8,14 +9,29 @@ body {
     margin-top: 2rem;
 }
 
+.btn-info{
+    margin-left: 15px !important;
+
+}
+
+.modal{
+    margin-top: 10rem;
+}
+.custom-popover {
+    --bs-popover-max-width: 200px;
+    --bs-popover-border-color: var(--bs-primary);
+    --bs-popover-header-bg: var(--bs-primary);
+    --bs-popover-header-color: var(--bs-white);
+    --bs-popover-body-padding-x: 1rem;
+    --bs-popover-body-padding-y: .5rem;
+  }
+
 @media (max-width: 412px) {
     .card{
         width: fit-content !important;
         margin-top: 0rem !important;
     }   
-}
-
-.btn-info{
-    margin-left: 15px !important;
-
+    .modal{
+        margin-top: 0rem !important;
+    }
 }

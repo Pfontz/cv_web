@@ -11,14 +11,21 @@
             <div class="card mx-auto" style="width:400px">
               <img class="card-img-top" src="scss/photo.jpg" alt="Card image">
               <div class="card-body">
-                <h4 class="card-title">John Doe</h4>
+                <button type="button" class="btn btn-secondary"
+                    data-bs-toggle="popover" data-bs-placement="right"
+                    data-bs-custom-class="custom-popover"
+                    data-bs-title="Custom popover"
+                    data-bs-html="true"                
+                    data-bs-content="This popover is themed via CSS variables.">
+                    John Doe
+                </button>
                 <h6 class="card-title">Hi!, This is my online profile.</h6>
                 <br>
                 <h6 class="card-title">First of all I'd like to introduce my self:</h6>
                 <p class="fw-light">Morbi molestie quis ex nec hendrerit. Ut mattis dolor vitae eleifend sollicitudin. Donec sed nunc tellus. Ut et sem vitae sem vehicula consequat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed dictum pulvinar quam, nec commodo nunc facilisis id. Fusce nec eros sed lacus bibendum fringilla vitae ac tellus. Suspendisse vulputate ipsum nisi, eu dignissim eros iaculis a. Aliquam mattis nulla ut enim vehicula laoreet.;.</p>
                 <h6 class="card-title">My Goals:</h6>
                 <p class="fw-light">Sed dictum pulvinar quam, nec commodo nunc facilisis id. Fusce nec eros sed lacus bibendum fringilla vitae ac tellus. Suspendisse vulputate ipsum nisi, eu dignissim eros iaculis a. Aliquam mattis nulla ut enim vehicula laoreet.;.</p>
-                <a href="#" class="btn btn-warning">See Profile</a>
+                <a href="cv_body.html" class="btn btn-warning">See Profile</a>
                 <!--<a href="contact.html" class="btn btn-info">Contact</a>  -->
                 <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#myModal">Contact </button> 
               </div>
@@ -95,5 +102,9 @@
                 </div>
                 </div>
             </div>   
+            <script>
+                const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+                const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+            </script>
     </body>
 </html>
